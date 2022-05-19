@@ -1,5 +1,5 @@
 <script setup>
-import { inject, onMounted, watch, ref } from "vue";
+import { inject, onActivated, watch, ref } from "vue";
 import { store } from "../store/store.js";
 const { getLocalUsers } = inject("homeFuntions");
 
@@ -40,7 +40,7 @@ function getAge(date) {
   return age;
 }
 
-onMounted(() => {
+onActivated(() => {
   updateUserList();
 });
 </script>
