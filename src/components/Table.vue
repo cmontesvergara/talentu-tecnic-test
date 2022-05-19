@@ -40,9 +40,12 @@ function getAge(date) {
   return age;
 }
 
-onActivated(() => {
-  updateUserList();
+onMounted(() => {
+  if (store.remoteUsersState == "unrequested") {
+    getUsers();
+  }
 });
+
 </script>
 
 <template >

@@ -64,11 +64,6 @@ function setStateForm() {
   }
 }
 
-onMounted(() => {
-  if (store.remoteUsersState == "unrequested") {
-    getUsers();
-  }
-});
 
 
 </script>
