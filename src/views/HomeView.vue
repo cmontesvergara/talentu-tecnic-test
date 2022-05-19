@@ -1,5 +1,5 @@
 <script setup>
-import { provide } from 'vue'
+import { provide, onBeforeMount } from 'vue'
 import { store } from "../store/store.js";
 import Table from '@/components/Table.vue'
 import FormControl from '@/components/FormControl.vue'
@@ -42,9 +42,9 @@ provide('homeFuntions', {
   getLocalUsers,getUsers,saveLocal
 })
 
-onMounted(() => {
+onBeforeMount(() => {
   if (store.remoteUsersState == "unrequested") {
-    getUsers();
+    getUsers()
   }
 });
 </script>
