@@ -1,7 +1,7 @@
 
 <script setup>
 import { store } from "../store/store.js";
-import { ref, onMounted,inject } from "vue";
+import { ref,inject } from "vue";
 
 
 const { getLocalUsers, getUsers,saveLocal} = inject('homeFuntions')

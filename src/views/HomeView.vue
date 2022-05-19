@@ -41,6 +41,12 @@ function saveLocal(params) {
 provide('homeFuntions', {
   getLocalUsers,getUsers,saveLocal
 })
+
+onMounted(() => {
+  if (store.remoteUsersState == "unrequested") {
+    getUsers();
+  }
+});
 </script>
 
 <template>
